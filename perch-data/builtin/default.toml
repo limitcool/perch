@@ -1,0 +1,100 @@
+v = 2
+id = "default"
+order = 60
+
+[meta]
+name = "💎 Perch 极简"
+description = "未来钛金冷灰科技"
+title = "💠 PERCH // SYSTEM"
+preview = [ 56, 189, 248,]
+
+[colors]
+accent = "#38BDF8FF"
+sub = "#94A3B8FF"
+bg = "#10141CD4"
+dock_bg = "#0C1016D2"
+stroke = "#38BDF83C"
+item_bg = "#00000041"
+item_hover = "#38BDF88C"
+pill_bg = "#38BDF8D2"
+white = "#F8FAFCFF"
+muted = "#B6C0CFF0"
+on_accent = "#0A0C14FF"
+on_sub = "#0A0C14FF"
+danger = "239,68,68,255"
+warn = "249,115,22,255"
+ok = "16,185,129,255"
+
+[style]
+font_main = "Segoe UI Emoji, Segoe UI Variable Display, Microsoft YaHei UI"
+font_num = "Segoe UI Variable Display, Consolas"
+radius = 10.0
+frame_stroke = "#38BDF83C"
+frame_width = 1.0
+shape2 = "Line 10,1,250,1 | Stroke Color 255,255,255,35 | StrokeWidth 1"
+corner = "Line 245,1,259,15 | Stroke Color #38BDF8FF | StrokeWidth 2"
+bar_h = 4.0
+seg_color = "#00000000"
+chrome = "none"
+
+[labels]
+dock_title = "💠 极简科技应用坞"
+field_name = "SYSTEM"
+unit_name = "CORE"
+title_timer = "⏱ 战术番茄钟  POMO"
+sub_timer = "POMO"
+title_events = "📅 战术日程  EVENTS"
+sub_events = "EVENTS"
+title_todo = "📝 战术待办  COMMANDS"
+sub_todo = "COMMANDS"
+title_media = "🎵 战术音频  MEDIA"
+sub_media = "MEDIA"
+title_weather = "🛰️ 实时气象"
+title_water = "💧 战术补给  HYDRO"
+sub_water = "HYDRO"
+lbl_cpu = "⚡ SYNC RATE (CPU)"
+lbl_ram = "🧠 MEMORY (RAM)"
+lbl_c = "🛡️ ARMOR (C:)"
+lbl_d = "📦 AMMO (D:)"
+lbl_net = "📡 TELEMETRY"
+
+[fx]
+kind = "dot"
+rgb = [ 150, 190, 255,]
+size_min = 5.0
+size_max = 13.0
+speed_min = 10.0
+speed_max = 24.0
+up = true
+sway = 0.5
+alpha_min = 40.0
+alpha_max = 100.0
+
+[wallpaper]
+prefix = "default"
+
+[messages]
+water = "该喝水了。"
+
+[quotes]
+speaker = "💠 PERCH // SYSTEM"
+lines = [ "「 System check complete, all green. 」#CRLF#系统自检完成,状态良好。", "「 Calendar synced. 」#CRLF#日程已同步。", "「 Memory and disks look healthy. 」#CRLF#内存与磁盘状态正常。", "「 Network link stable. 」#CRLF#网络连接稳定。", "「 Weather data refreshed. 」#CRLF#天气数据已刷新。", "「 Ready when you are. 」#CRLF#随时待命。" ]
+
+[labels_en]
+dock_title = "💠 Perch Dock"
+title_timer = "⏱ Focus Timer"
+sub_timer = "FOCUS"
+title_events = "📅 Events"
+sub_events = "EVENTS"
+title_todo = "📝 Tasks"
+sub_todo = "TASKS"
+title_media = "🎵 Music"
+sub_media = "MUSIC"
+title_weather = "🛰️ Weather"
+title_water = "💧 Water"
+sub_water = "WATER"
+lbl_cpu = "⚡ CPU"
+lbl_ram = "🧠 RAM"
+lbl_c = "💽 Disk (C:)"
+lbl_d = "💽 Disk (D:)"
+lbl_net = "📡 Network"

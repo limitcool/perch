@@ -1,0 +1,85 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Rust (stable, MSVC)
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Cache cargo
+        uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: |
+            perch-data
+            perch-core
+            perch
+
+      - name: Test perch-data
+        working-directory: perch-data
+        run: cargo test --locked
+
+      # audio / brightness tests need real devices, which hosted runners do not have
+      - name: Test perch
+        working-directory: perch
+        run: 'cargo test --locked --release -- --skip audio:: --skip brightness::'
+
+      - name: Build perch-core
+        working-directory: perch-core
+        run: cargo build --release --locked
+
+      - name: Build perch
+        working-directory: perch
+        run: cargo build --release --locked
+
+      - name: Package
+        shell: pwsh
+        run: |
+          $dist = 'dist/perch'
+          New-Item -ItemType Directory -Force "$dist/@Resources/bin" | Out-Null
+          Copy-Item perch/target/release/perch.exe $dist/
+          Copy-Item perch-core/target/release/perch-core.exe "$dist/@Resources/bin/"
+          Copy-Item README.md, LICENSE $dist/
+          Compress-Archive -Path "$dist/*" -DestinationPath dist/perch-windows-x64.zip -Force
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: perch-windows-x64
+          path: dist/perch-windows-x64.zip
+          if-no-files-found: error
+
+  release:
+    if: startsWith(github.ref, 'refs/tags/v')
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: perch-windows-x64
+
+      - name: Publish release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "${{ github.ref_name }}" perch-windows-x64.zip \
+            --repo "${{ github.repository }}" \
+            --title "${{ github.ref_name }}" \
+            --generate-notes

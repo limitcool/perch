@@ -1,0 +1,100 @@
+v = 2
+id = "crimson"
+order = 40
+
+[meta]
+name = "🌙 绯夜 Crimson"
+description = "绯红与深蓝"
+title = "🌙 CRIMSON // NIGHT"
+preview = [ 225, 29, 72,]
+
+[colors]
+accent = "#E11D48FF"
+sub = "#60A5FAFF"
+bg = "#100B10D4"
+dock_bg = "#0C080CD2"
+stroke = "#E11D4846"
+item_bg = "#00000041"
+item_hover = "#E11D4891"
+pill_bg = "#E11D48DC"
+white = "#F8FAFCFF"
+muted = "#E0CAD2F0"
+on_accent = "#FFFFFFFF"
+on_sub = "#0A0C14FF"
+danger = "239,68,68,255"
+warn = "249,115,22,255"
+ok = "16,185,129,255"
+
+[style]
+font_main = "KaiTi, Segoe UI Emoji, Microsoft YaHei UI"
+font_num = "Bahnschrift SemiLight, Consolas"
+radius = 1.0
+frame_stroke = "#ECE2DC5F"
+frame_width = 1.0
+shape2 = "Line 150,0,188,28 | Stroke Color 255,255,255,70 | StrokeWidth 1"
+corner = "Rectangle 249,0,11,8,1 | Fill Color 225,29,72,235 | Stroke Color 0,0,0,0 | StrokeWidth 0"
+bar_h = 3.0
+seg_color = "#00000000"
+chrome = "none"
+
+[labels]
+dock_title = "🌙 绯夜应用坞"
+field_name = "VERMILION"
+unit_name = "BLADE"
+title_timer = "⏱ 专注计时  FOCUS"
+sub_timer = "KAN"
+title_events = "📅 日程  EVENTS"
+sub_events = "DAYS"
+title_todo = "📝 待办  TASKS"
+sub_todo = "MEMO"
+title_media = "🎵 音乐  MUSIC"
+sub_media = "OTO"
+title_weather = "🛰️ 今日天气"
+title_water = "💧 饮水  WATER"
+sub_water = "WATER"
+lbl_cpu = "⚡ 处理器  CPU"
+lbl_ram = "🧠 内存  RAM"
+lbl_c = "💽 磁盘  DISK (C:)"
+lbl_d = "💽 磁盘  DISK (D:)"
+lbl_net = "📡 网络  NETWORK"
+
+[fx]
+kind = "dot"
+rgb = [ 236, 240, 248,]
+size_min = 2.0
+size_max = 5.5
+speed_min = 26.0
+speed_max = 56.0
+up = false
+sway = 1.0
+alpha_min = 110.0
+alpha_max = 230.0
+
+[wallpaper]
+prefix = "crimson"
+
+[messages]
+water = "静心,饮一盏水。"
+
+[quotes]
+speaker = "🌙 CRIMSON // NIGHT"
+lines = [ "「 The night is long enough. 」#CRLF#夜还很长,足够做完。", "「 Cut the noise, keep the signal. 」#CRLF#去掉噪音,留下信号。", "「 Finish what matters first. 」#CRLF#先完成最重要的事。", "「 Stay sharp, stay calm. 」#CRLF#保持敏锐,保持冷静。", "「 Sleep is a feature, not a bug. 」#CRLF#睡眠不是缺陷,是功能。" ]
+
+[labels_en]
+dock_title = "🌙 Crimson Dock"
+title_timer = "⏱ Focus Timer"
+sub_timer = "FOCUS"
+title_events = "📅 Events"
+sub_events = "EVENTS"
+title_todo = "📝 Tasks"
+sub_todo = "TASKS"
+title_media = "🎵 Music"
+sub_media = "MUSIC"
+title_weather = "🛰️ Weather"
+title_water = "💧 Water"
+sub_water = "WATER"
+lbl_cpu = "⚡ CPU"
+lbl_ram = "🧠 RAM"
+lbl_c = "💽 Disk (C:)"
+lbl_d = "💽 Disk (D:)"
+lbl_net = "📡 Network"

@@ -1,0 +1,100 @@
+v = 2
+id = "orchid"
+order = 30
+
+[meta]
+name = "🔮 兰紫 Orchid"
+description = "魅紫与水晶粉"
+title = "💜 ORCHID // BLOOM"
+preview = [ 168, 85, 247,]
+
+[colors]
+accent = "#A855F7FF"
+sub = "#E879F9FF"
+bg = "#120C1CD4"
+dock_bg = "#0E0816D2"
+stroke = "#A855F746"
+item_bg = "#00000041"
+item_hover = "#A855F791"
+pill_bg = "#A855F7DC"
+white = "#F8FAFCFF"
+muted = "#DEBEFCF0"
+on_accent = "#FFFFFFFF"
+on_sub = "#0A0C14FF"
+danger = "239,68,68,255"
+warn = "249,115,22,255"
+ok = "16,185,129,255"
+
+[style]
+font_main = "Segoe UI Emoji, Segoe UI Variable Display, Microsoft YaHei UI"
+font_num = "Segoe UI Variable Display, Consolas"
+radius = 14.0
+frame_stroke = "#BE78FA82"
+frame_width = 1.3
+shape2 = "Line 14,1,246,1 | Stroke Color 255,255,255,45 | StrokeWidth 1"
+corner = "Line 245,1,259,15 | Stroke Color #E879F9FF | StrokeWidth 2.5"
+bar_h = 6.0
+seg_color = "#00000000"
+chrome = "none"
+
+[labels]
+dock_title = "💜 兰紫应用坞"
+field_name = "GARDEN"
+unit_name = "PETAL"
+title_timer = "⏱ 专注计时  FOCUS"
+sub_timer = "SPIRIT"
+title_events = "📅 日程  EVENTS"
+sub_events = "DATE"
+title_todo = "📝 待办  TASKS"
+sub_todo = "PLANS"
+title_media = "🎵 音乐  MUSIC"
+sub_media = "SONG"
+title_weather = "🛰️ 今日天气"
+title_water = "💧 饮水  WATER"
+sub_water = "WATER"
+lbl_cpu = "⚡ 处理器  CPU"
+lbl_ram = "🧠 内存  RAM"
+lbl_c = "💽 磁盘  DISK (C:)"
+lbl_d = "💽 磁盘  DISK (D:)"
+lbl_net = "📡 网络  NETWORK"
+
+[fx]
+kind = "diamond"
+rgb = [ 200, 140, 255,]
+size_min = 10.0
+size_max = 22.0
+speed_min = 12.0
+speed_max = 30.0
+up = false
+sway = 0.7
+alpha_min = 90.0
+alpha_max = 200.0
+
+[wallpaper]
+prefix = "orchid"
+
+[messages]
+water = "先喝点水再继续吧。"
+
+[quotes]
+speaker = "💜 ORCHID // BLOOM"
+lines = [ "「 Grow at your own pace. 」#CRLF#按自己的节奏生长。", "「 Quiet progress is still progress. 」#CRLF#安静的进展也是进展。", "「 Take a breath, then begin. 」#CRLF#先深呼吸,再开始。", "「 Today's effort blooms tomorrow. 」#CRLF#今天的努力,明天开花。", "「 Drink some water. 」#CRLF#记得喝水。" ]
+
+[labels_en]
+dock_title = "💜 Orchid Dock"
+title_timer = "⏱ Focus Timer"
+sub_timer = "FOCUS"
+title_events = "📅 Events"
+sub_events = "EVENTS"
+title_todo = "📝 Tasks"
+sub_todo = "TASKS"
+title_media = "🎵 Music"
+sub_media = "MUSIC"
+title_weather = "🛰️ Weather"
+title_water = "💧 Water"
+sub_water = "WATER"
+lbl_cpu = "⚡ CPU"
+lbl_ram = "🧠 RAM"
+lbl_c = "💽 Disk (C:)"
+lbl_d = "💽 Disk (D:)"
+lbl_net = "📡 Network"

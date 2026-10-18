@@ -1,0 +1,100 @@
+v = 2
+id = "neon"
+order = 50
+
+[meta]
+name = "⚡ 霓虹 Neon"
+description = "系统青蓝与红"
+title = "⚡ NEON // GRID"
+preview = [ 34, 211, 238,]
+
+[colors]
+accent = "#22D3EEFF"
+sub = "#EF4444FF"
+bg = "#080E14D4"
+dock_bg = "#060A10D2"
+stroke = "#22D3EE46"
+item_bg = "#00000041"
+item_hover = "#22D3EE91"
+pill_bg = "#22D3EEDC"
+white = "#F8FAFCFF"
+muted = "#B0D0DEF0"
+on_accent = "#0A0C14FF"
+on_sub = "#FFFFFFFF"
+danger = "239,68,68,255"
+warn = "249,115,22,255"
+ok = "16,185,129,255"
+
+[style]
+font_main = "Bahnschrift, Segoe UI Emoji, Microsoft YaHei UI"
+font_num = "Bahnschrift, Consolas"
+radius = 7.0
+frame_stroke = "#E2ECF696"
+frame_width = 1.4
+shape2 = "Line 8,1,252,1 | Stroke Color 255,255,255,70 | StrokeWidth 1"
+corner = "Line 14,1,60,1 | Stroke Color #22D3EEFF | StrokeWidth 3"
+bar_h = 8.0
+seg_color = "#0A1018FF"
+chrome = "none"
+
+[labels]
+dock_title = "⚡ 霓虹网格应用坞"
+field_name = "CYBER GRID"
+unit_name = "PULSE"
+title_timer = "⏱ 任务计时  QUEST"
+sub_timer = "QUEST"
+title_events = "📅 事件记录  LOG"
+sub_events = "LOG"
+title_todo = "📝 任务日志  QUESTS"
+sub_todo = "QUESTS"
+title_media = "🎵 音乐栏  MUSIC"
+sub_media = "MUSIC"
+title_weather = "🛰️ 当前层 · 天气"
+title_water = "💧 回复药水  POTION"
+sub_water = "POTION"
+lbl_cpu = "❤ HP  (CPU)"
+lbl_ram = "💠 MP  (RAM)"
+lbl_c = "🛡️ EQUIP (C:)"
+lbl_d = "🎒 ITEM (D:)"
+lbl_net = "📡 NETWORK"
+
+[fx]
+kind = "streak"
+rgb = [ 96, 200, 255,]
+size_min = 24.0
+size_max = 70.0
+speed_min = 110.0
+speed_max = 220.0
+up = false
+sway = 0.0
+alpha_min = 50.0
+alpha_max = 150.0
+
+[wallpaper]
+prefix = "neon"
+
+[messages]
+water = "HP 下降提醒:请补充水分。"
+
+[quotes]
+speaker = "⚡ NEON // GRID"
+lines = [ "「 All systems nominal. 」#CRLF#所有系统运行正常。", "「 Latency low, focus high. 」#CRLF#延迟很低,专注很高。", "「 Compile, test, ship. 」#CRLF#编译、测试、发布。", "「 Another loop, another level. 」#CRLF#又一轮循环,又一级成长。", "「 Stay in the flow. 」#CRLF#保持心流。" ]
+
+[labels_en]
+dock_title = "⚡ Neon Dock"
+title_timer = "⏱ Focus Timer"
+sub_timer = "FOCUS"
+title_events = "📅 Events"
+sub_events = "EVENTS"
+title_todo = "📝 Tasks"
+sub_todo = "TASKS"
+title_media = "🎵 Music"
+sub_media = "MUSIC"
+title_weather = "🛰️ Weather"
+title_water = "💧 Water"
+sub_water = "WATER"
+lbl_cpu = "⚡ CPU"
+lbl_ram = "🧠 RAM"
+lbl_c = "💽 Disk (C:)"
+lbl_d = "💽 Disk (D:)"
+lbl_net = "📡 Network"

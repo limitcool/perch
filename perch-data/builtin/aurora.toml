@@ -1,0 +1,100 @@
+v = 2
+id = "aurora"
+order = 20
+
+[meta]
+name = "✨ 极光 Aurora"
+description = "皇家蓝与金"
+title = "✨ AURORA // CLASSIC"
+preview = [ 66, 133, 244,]
+
+[colors]
+accent = "#4285F4FF"
+sub = "#FACC15FF"
+bg = "#0A0F20D4"
+dock_bg = "#080C1AD2"
+stroke = "#4285F446"
+item_bg = "#00000041"
+item_hover = "#4285F491"
+pill_bg = "#4285F4DC"
+white = "#F8FAFCFF"
+muted = "#C0CBE0F0"
+on_accent = "#FFFFFFFF"
+on_sub = "#0A0C14FF"
+danger = "239,68,68,255"
+warn = "249,115,22,255"
+ok = "16,185,129,255"
+
+[style]
+font_main = "Palatino Linotype, Segoe UI Emoji, Microsoft YaHei UI"
+font_num = "Palatino Linotype, Consolas"
+radius = 4.0
+frame_stroke = "#F4C43096"
+frame_width = 1.4
+shape2 = "Line 12,1,248,1 | Stroke Color 250,204,21,110 | StrokeWidth 1"
+corner = "Line 226,1,259,1 | Stroke Color #FACC15FF | StrokeWidth 3.5"
+bar_h = 5.0
+seg_color = "#00000000"
+chrome = "none"
+
+[labels]
+dock_title = "✨ 极光应用坞"
+field_name = "HORIZON"
+unit_name = "BEACON"
+title_timer = "⏱ 专注计时  FOCUS"
+sub_timer = "SEAL"
+title_events = "📅 日程  EVENTS"
+sub_events = "BLOOM"
+title_todo = "📝 待办  TASKS"
+sub_todo = "VOWS"
+title_media = "🎵 音乐  MUSIC"
+sub_media = "HYMN"
+title_weather = "🛰️ 今日天气"
+title_water = "💧 饮水  WATER"
+sub_water = "SPRING"
+lbl_cpu = "⚡ 处理器  CPU"
+lbl_ram = "🧠 内存  RAM"
+lbl_c = "💽 磁盘  DISK (C:)"
+lbl_d = "💽 磁盘  DISK (D:)"
+lbl_net = "📡 网络  NETWORK"
+
+[fx]
+kind = "dot"
+rgb = [ 250, 204, 21,]
+size_min = 3.0
+size_max = 7.0
+speed_min = 14.0
+speed_max = 34.0
+up = true
+sway = 0.6
+alpha_min = 90.0
+alpha_max = 220.0
+
+[wallpaper]
+prefix = "aurora"
+
+[messages]
+water = "请饮一杯清水。"
+
+[quotes]
+speaker = "✨ AURORA // CLASSIC"
+lines = [ "「 Steady light, steady focus. 」#CRLF#光线稳定,专注稳定。", "「 One task at a time. 」#CRLF#一次只做一件事。", "「 Small steps still move you forward. 」#CRLF#小步前进,也是前进。", "「 Clear the list, clear the mind. 」#CRLF#清空清单,清空思绪。", "「 Rest is part of the work. 」#CRLF#休息也是工作的一部分。" ]
+
+[labels_en]
+dock_title = "✨ Aurora Dock"
+title_timer = "⏱ Focus Timer"
+sub_timer = "FOCUS"
+title_events = "📅 Events"
+sub_events = "EVENTS"
+title_todo = "📝 Tasks"
+sub_todo = "TASKS"
+title_media = "🎵 Music"
+sub_media = "MUSIC"
+title_weather = "🛰️ Weather"
+title_water = "💧 Water"
+sub_water = "WATER"
+lbl_cpu = "⚡ CPU"
+lbl_ram = "🧠 RAM"
+lbl_c = "💽 Disk (C:)"
+lbl_d = "💽 Disk (D:)"
+lbl_net = "📡 Network"

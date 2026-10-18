@@ -1,0 +1,42 @@
+shots/
+shots_*/
+*.log
+*.png
+*.bak
+*.ps1
+test_*.py
+apply_*.py
+deploy_*.py
+fix_*.py
+scan_*.py
+dbg_*.py
+cleanup_*.py
+restore_*.py
+locate_*.py
+find_*.py
+enable_*.py
+check_*.py
+safe_*.py
+sync_*.py
+run_*.py
+load_*.py
+!screen-full.png
+
+*.bak-*
+add_cover_bg.py
+
+# Rust build output
+target/
+**/target/
+target-dev/
+**/target-dev/
+Cargo.lock.bak
+
+# keep the maintained helper scripts
+!tools/deploy-hud.ps1
+!tools/hud-smoke.ps1
+!tools/hud-soak.ps1
+!tools/make-public.ps1
+
+# README screenshots (generated on a neutral wallpaper)
+!docs/images/*.png

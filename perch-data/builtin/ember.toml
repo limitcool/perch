@@ -1,0 +1,100 @@
+v = 2
+id = "ember"
+order = 10
+
+[meta]
+name = "🔥 熔岩 Ember"
+description = "战术警戒红橙"
+title = "🔥 EMBER // TACTICAL"
+preview = [ 255, 69, 0,]
+
+[colors]
+accent = "#FF4500FF"
+sub = "#F97316FF"
+bg = "#0E0A0CD4"
+dock_bg = "#0C080AD7"
+stroke = "#FF450046"
+item_bg = "#00000041"
+item_hover = "#FF45008C"
+pill_bg = "#FF4500DC"
+white = "#F8FAFCFF"
+muted = "#BEC8D4F0"
+on_accent = "#FFFFFFFF"
+on_sub = "#0A0C14FF"
+danger = "239,68,68,255"
+warn = "249,115,22,255"
+ok = "16,185,129,255"
+
+[style]
+font_main = "Bahnschrift SemiBold Condensed, Segoe UI Emoji, Microsoft YaHei UI"
+font_num = "Bahnschrift SemiBold Condensed, Consolas"
+radius = 2.0
+frame_stroke = "#FF450046"
+frame_width = 1.2
+shape2 = "Line 2,4,46,4 | Stroke Color #FF4500FF | StrokeWidth 6"
+corner = "Line 245,4,256,15 | Stroke Color #FF4500FF | StrokeWidth 7"
+bar_h = 4.0
+seg_color = "#00000000"
+chrome = "tactical"
+
+[labels]
+dock_title = "🔥 熔岩战术应用坞"
+field_name = "CORE SHIELD"
+unit_name = "FORGE UNIT"
+title_timer = "⏱ 战术番茄钟  POMO"
+sub_timer = "POMO"
+title_events = "📅 战术日程  EVENTS"
+sub_events = "EVENTS"
+title_todo = "📝 战术待办  COMMANDS"
+sub_todo = "COMMANDS"
+title_media = "🎵 战术音频  MEDIA"
+sub_media = "MEDIA"
+title_weather = "🛰️ 实时气象"
+title_water = "💧 补给水  SUPPLY"
+sub_water = "SUPPLY"
+lbl_cpu = "⚡ SYNC RATE (CPU)"
+lbl_ram = "🧠 MEMORY (RAM)"
+lbl_c = "🛡️ ARMOR (C:)"
+lbl_d = "📦 AMMO (D:)"
+lbl_net = "📡 TELEMETRY"
+
+[fx]
+kind = "dot"
+rgb = [ 255, 98, 62,]
+size_min = 2.0
+size_max = 5.0
+speed_min = 20.0
+speed_max = 52.0
+up = true
+sway = 0.8
+alpha_min = 100.0
+alpha_max = 230.0
+
+[wallpaper]
+prefix = "ember"
+
+[messages]
+water = "能量下降,请补充水分。"
+
+[quotes]
+speaker = "🔥 EMBER // TACTICAL"
+lines = [ "「 Priorities set. Execute. 」#CRLF#优先级已定,开始执行。", "「 Focus on the next action. 」#CRLF#专注下一步行动。", "「 Pressure makes diamonds, rest makes sense. 」#CRLF#压力成就钻石,休息成就清醒。", "「 Finish strong. 」#CRLF#有力收尾。", "「 Review, adjust, advance. 」#CRLF#复盘、调整、推进。" ]
+
+[labels_en]
+dock_title = "🔥 Ember Dock"
+title_timer = "⏱ Focus Timer"
+sub_timer = "FOCUS"
+title_events = "📅 Events"
+sub_events = "EVENTS"
+title_todo = "📝 Tasks"
+sub_todo = "TASKS"
+title_media = "🎵 Music"
+sub_media = "MUSIC"
+title_weather = "🛰️ Weather"
+title_water = "💧 Water"
+sub_water = "WATER"
+lbl_cpu = "⚡ CPU"
+lbl_ram = "🧠 RAM"
+lbl_c = "💽 Disk (C:)"
+lbl_d = "💽 Disk (D:)"
+lbl_net = "📡 Network"

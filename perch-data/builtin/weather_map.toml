@@ -1,0 +1,102 @@
+# Perch Weather Mapping Rules
+# 支持从 <root>/weather_map.toml 外部覆盖
+
+[defaults]
+glow_fill = "#ThemeSub#"
+glow_stroke = "#ThemeAccent#"
+fallback_icon = "🌤️ "
+
+[[glow_rules]]
+keywords = ["rain", "shower", "drizzle", "storm", "thunder", "雨"]
+fill = "56,189,248,220"
+stroke = "14,165,233,255"
+
+[[glow_rules]]
+keywords = ["snow", "ice", "雪"]
+fill = "224,242,254,230"
+stroke = "255,255,255,255"
+
+[[glow_rules]]
+keywords = ["cloudy", "overcast", "阴", "多云"]
+fill = "148,163,184,180"
+stroke = "203,213,225,255"
+
+[[status_rules]]
+keywords = ["sunny", "clear", "晴"]
+text = "☀️ 晴朗"
+text_en = "☀️ Clear"
+
+[[status_rules]]
+keywords = ["partly cloudy", "少云"]
+text = "⛅ 多云"
+text_en = "⛅ Partly cloudy"
+
+[[status_rules]]
+keywords = ["cloudy", "overcast", "阴"]
+text = "☁️ 阴天"
+text_en = "☁️ Overcast"
+
+[[status_rules]]
+keywords = ["thunder", "storm", "雷"]
+text = "⛈️ 雷阵雨"
+text_en = "⛈️ Thunderstorm"
+
+[[status_rules]]
+keywords = ["heavy rain", "大雨", "暴雨"]
+text = "🌧️ 大雨"
+text_en = "🌧️ Heavy rain"
+
+[[status_rules]]
+keywords = ["rain", "drizzle", "shower", "雨"]
+text = "🌦️ 小雨"
+text_en = "🌦️ Light rain"
+
+[[status_rules]]
+keywords = ["snow", "ice", "雪"]
+text = "❄️ 降雪"
+text_en = "❄️ Snow"
+
+[[status_rules]]
+keywords = ["fog", "mist", "haze", "雾", "霾"]
+text = "🌫️ 雾霾"
+text_en = "🌫️ Fog / haze"
+
+[[forecast_rules]]
+keywords = ["sunny", "clear", "晴"]
+text = "☀️ 晴"
+text_en = "☀️"
+
+[[forecast_rules]]
+keywords = ["partly cloudy", "少云", "多云"]
+text = "⛅ 多云"
+text_en = "⛅"
+
+[[forecast_rules]]
+keywords = ["cloudy", "overcast", "阴"]
+text = "☁️ 阴"
+text_en = "☁️"
+
+[[forecast_rules]]
+keywords = ["thunder", "storm", "雷"]
+text = "⛈️ 雷雨"
+text_en = "⛈️"
+
+[[forecast_rules]]
+keywords = ["heavy rain", "大雨"]
+text = "🌧️ 大雨"
+text_en = "🌧️"
+
+[[forecast_rules]]
+keywords = ["rain", "drizzle", "shower", "雨"]
+text = "🌦️ 小雨"
+text_en = "🌦️"
+
+[[forecast_rules]]
+keywords = ["snow", "雪"]
+text = "❄️ 降雪"
+text_en = "❄️"
+
+[[forecast_rules]]
+keywords = ["fog", "mist", "雾"]
+text = "🌫️ 雾"
+text_en = "🌫️"

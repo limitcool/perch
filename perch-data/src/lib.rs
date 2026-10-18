@@ -58,6 +58,13 @@ pub struct Battery {
     pub mouse_status: String,
     #[serde(default)]
     pub mouse_color: String,
+    /// false = 没有任何可显示的电量来源(台式机且没配外设):HUD 自动隐藏电量卡片
+    #[serde(default = "default_true")]
+    pub available: bool,
+}
+
+fn default_true() -> bool {
+    true
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Default)]
@@ -416,6 +423,7 @@ mod tests {
             mouse_text: "85%".into(),
             mouse_status: "Mouse: 85%".into(),
             mouse_color: "239,68,68,255".into(),
+            available: true,
         };
         write_atomic(&path, &b).unwrap();
         assert!(path.exists());

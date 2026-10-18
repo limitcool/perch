@@ -168,9 +168,24 @@ pub fn run_cli(args: Vec<String>) -> Result<(), Box<dyn std::error::Error>> {
         "setup" => {
             reload_perch_system();
         }
-        "battery" => {
-            let _ = update_battery();
-        }
+        "battery" => match args.get(2).map(|s| s.as_str()) {
+            // battery list:列出本机 HID 设备;battery dump <vid> <pid> [usage_page] [usage]:抓输入报告(找电量字节)
+            Some("list") => crate::battery::list_hid_devices(),
+            Some("dump") => {
+                let num = |i: usize, d: u32| -> u32 {
+                    args.get(i)
+                        .and_then(|s| {
+                            let s = s.trim();
+                            if let Some(h) = s.strip_prefix("0x").or_else(|| s.strip_prefix("0X")) { u32::from_str_radix(h, 16).ok() } else { s.parse().ok() }
+                        })
+                        .unwrap_or(d)
+                };
+                crate::battery::dump_hid_reports(num(3, 0) as u16, num(4, 0) as u16, num(5, 0xFF00) as u16, num(6, 2) as u16);
+            }
+            _ => {
+                let _ = update_battery();
+            }
+        },
         _ => {
             let _ = update_media();
         }

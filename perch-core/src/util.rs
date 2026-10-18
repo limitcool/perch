@@ -68,6 +68,12 @@ pub fn local_hm() -> (u32, u32) {
     (st.wHour as u32, st.wMinute as u32)
 }
 
+/// 用系统默认程序打开一个文件(无窗口闪烁)
+pub fn open_path(p: &std::path::Path) {
+    use std::os::windows::process::CommandExt;
+    let _ = std::process::Command::new("cmd").args(["/C", "start", ""]).arg(p).creation_flags(0x0800_0000).spawn();
+}
+
 /// 界面语言:config.toml [ui] language(缺省 zh-CN,与旧版本行为一致;"auto" 跟随系统)
 pub fn init_language() {
     let cfg = user_config();

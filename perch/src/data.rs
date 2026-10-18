@@ -155,6 +155,7 @@ impl Hub {
             self.weather = m;
         }
         if let Ok(b) = perch_data::read::<perch_data::Battery>(paths::battery_toml()) {
+            crate::cards::set_battery_available(b.available);
             let mut m = Vars::new();
             m.insert("MouseBatteryIcon".into(), b.mouse_icon);
             m.insert("MouseBatteryText".into(), b.mouse_text);

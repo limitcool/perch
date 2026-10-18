@@ -178,7 +178,18 @@ pub fn card_label(i: usize) -> String {
 /// 被隐藏的卡片位掩码(位序同 CARD_NAMES)
 pub fn hidden_mask() -> u32 {
     let hidden = config::get().widgets.hidden;
-    CARD_NAMES.iter().enumerate().filter(|(_, n)| hidden.iter().any(|h| h == *n)).fold(0, |m, (i, _)| m | (1 << i))
+    let mut mask = CARD_NAMES.iter().enumerate().filter(|(_, n)| hidden.iter().any(|h| h == *n)).fold(0, |m, (i, _)| m | (1 << i));
+    // 没有任何电量来源(台式机且没配设备)时,电量卡片自动隐藏
+    if BATTERY_UNAVAILABLE.load(std::sync::atomic::Ordering::Relaxed) {
+        mask |= 1 << 0; // CARD_NAMES[0] == "battery"
+    }
+    mask
+}
+
+static BATTERY_UNAVAILABLE: std::sync::atomic::AtomicBool = std::sync::atomic::AtomicBool::new(false);
+
+pub fn set_battery_available(available: bool) {
+    BATTERY_UNAVAILABLE.store(!available, std::sync::atomic::Ordering::Relaxed);
 }
 
 /// 可点击区域 id 属于哪张卡片

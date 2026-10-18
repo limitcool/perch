@@ -69,17 +69,30 @@ Default hotkeys: `Win+Alt+H` show/hide, `Win+Alt+L` float/widget, `Win+Alt+S` la
 `[calendar]`, `[notes]` (Obsidian), `[audio]`, `[pomodoro]`, `[system]`, `[display]`, `[[dock]]`, `[music_assistant]`,
 `[thresholds]`, `[intervals]`, `[dock_settings]`. Every option is commented in the generated file.
 
-Optional wireless-mouse battery (HID) — leave it out if you do not need it:
+### Battery card
+
+By default the battery card shows your laptop battery; on a desktop PC without a battery the card hides itself.
+To show a wireless mouse / keyboard instead (or as well), add one or more `[[battery]]` sources — the first one that
+returns a value is shown:
 
 ```toml
-[mouse]
+[[battery]]
+kind = "hid"            # read the battery level a wireless device reports over HID
 name = "My Mouse"
-vendor_id = 0x1234      # see Device Manager -> Details -> Hardware Ids
+vendor_id = 0x1234
 product_id = 0x5678
 usage_page = 0xFF00     # defaults shown
 usage = 2
-battery_byte = 6
+battery_byte = 6        # which byte of the input report holds the percentage
+
+[[battery]]
+kind = "system"         # fall back to the laptop battery
 ```
+
+Finding the numbers: run `perch-core.exe battery list` — it writes and opens `@Resources\data\hid_devices.txt` with every
+HID device (vendor-defined ones first). Then `perch-core.exe battery dump 0x1234 0x5678` captures a few input reports into
+`@Resources\data\hid_dump.txt`; the byte that tracks the battery level is your `battery_byte`. Vendor protocols differ,
+so not every device exposes its level this way — if yours does not work, open an issue and attach the dump.
 
 ## Theme packs / 主题包
 

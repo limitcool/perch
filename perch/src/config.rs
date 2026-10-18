@@ -256,6 +256,17 @@ const DEFAULT_TOML: &str = r##"# Perch 配置(改完在托盘菜单点"重新载
 [ui]
 language = "auto"             # "auto"(跟随系统) / "zh-CN"(简体中文) / "en"(English)
 
+# 电量卡片的来源(默认显示笔记本电池;台式机没有电池则卡片自动隐藏)。想显示无线鼠标/键盘:
+# 先运行 perch-core.exe battery list 找到 vendor_id / product_id,再取消注释。
+# [[battery]]
+# kind = "hid"
+# name = "My Mouse"
+# vendor_id = 0x1234
+# product_id = 0x5678
+# usage_page = 0xFF00
+# usage = 2
+# battery_byte = 6            # 不确定就运行 perch-core.exe battery dump <vid> <pid> 看哪一字节随电量变化
+
 [thresholds]
 battery_low = 20              # 鼠标/设备电量过低警告阈值(%)
 battery_warn = 40             # 鼠标/设备电量提醒阈值(%)
@@ -324,6 +335,17 @@ const DEFAULT_TOML_EN: &str = r##"# Perch configuration (edit, then use "Reload 
 
 [ui]
 language = "auto"             # "auto" (follow system) / "zh-CN" (Simplified Chinese) / "en" (English)
+
+# Battery card sources (default: the laptop battery; the card hides itself on a desktop PC without one).
+# To show a wireless mouse/keyboard run `perch-core.exe battery list` to find vendor_id / product_id, then uncomment.
+# [[battery]]
+# kind = "hid"
+# name = "My Mouse"
+# vendor_id = 0x1234
+# product_id = 0x5678
+# usage_page = 0xFF00
+# usage = 2
+# battery_byte = 6            # not sure? run `perch-core.exe battery dump <vid> <pid>` and see which byte follows the level
 
 [thresholds]
 battery_low = 20              # low-battery warning threshold for the mouse/device (%)

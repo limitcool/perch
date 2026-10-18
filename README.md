@@ -1,17 +1,16 @@
 <p align="center"><img src="docs/images/logo.png" alt="Perch logo" width="96"></p>
 
+<p align="center"><b>English</b> | <a href="README.zh-CN.md">简体中文</a></p>
+
 # Perch
 
 A lightweight, pure-Rust (Direct2D) desktop HUD for Windows 10/11 — floating cards on your desktop, an app dock with
 window previews, a quick launcher and a small toolbox. Built for **low CPU and RAM**: about 40 MB private working set,
 and almost no CPU while the desktop is covered by windows.
 
-一个纯 Rust(Direct2D)的 Windows 桌面悬浮面板:桌面卡片、带窗口预览的 Dock、启动器、工具箱。
-核心诉求是低占用:专用工作集约 40 MB,桌面被窗口盖住时几乎不占 CPU。
-
 ![Perch on a neutral wallpaper](docs/images/hero.png)
 
-## Features / 功能
+## Features
 
 - **Cards** — pomodoro timer, calendar (ICS subscriptions), todo (optional two-way Obsidian daily-note sync),
   media (Windows media session), water reminder, weather, system monitor, battery, quotes.
@@ -24,12 +23,14 @@ and almost no CPU while the desktop is covered by windows.
 
 ![Built-in themes: default, aurora, ember, neon](docs/images/themes.png)
 
-## Install / 安装
+## Install
 
 ### Download (recommended)
 
 Grab `perch-windows-x64.zip` from the [Releases](../../releases) page, extract it anywhere and run `perch.exe`.
 Everything the HUD needs is created next to the executable on first run (`config.toml`, `@Resources\...`).
+
+The executable is not code-signed, so Windows SmartScreen may warn on first launch: choose **More info → Run anyway**.
 
 ### Build from source
 
@@ -54,7 +55,7 @@ Or run `tools\deploy-hud.ps1`: it builds both crates and installs them to `%LOCA
 User state lives in `%APPDATA%\perch`. Autostart is up to you (a scheduled task or a Startup shortcut).
 The runtime root is resolved from the executable location, then the `PERCH_HOME` environment variable.
 
-## First run / 首次运行
+## First run
 
 Start `perch.exe`. It creates `config.toml` with sensible defaults, fetches weather and battery once, generates the
 default theme and shows the cards on your primary monitor. Right-click the tray icon for settings, theme selector,
@@ -63,7 +64,7 @@ show the desktop (`Win+D`).
 
 Default hotkeys: `Win+Alt+H` show/hide, `Win+Alt+L` float/widget, `Win+Alt+S` launcher, `Win+Alt+V` toolbox.
 
-## Configuration / 配置
+## Configuration
 
 `config.toml` is reloaded from the tray menu. Sections include `[ui]`, `[hotkeys]`, `[alert]`, `[widgets]`,
 `[calendar]`, `[notes]` (Obsidian), `[audio]`, `[pomodoro]`, `[system]`, `[display]`, `[[dock]]`, `[music_assistant]`,
@@ -94,7 +95,7 @@ HID device (vendor-defined ones first). Then `perch-core.exe battery dump 0x1234
 `@Resources\data\hid_dump.txt`; the byte that tracks the battery level is your `battery_byte`. Vendor protocols differ,
 so not every device exposes its level this way — if yours does not work, open an issue and attach the dump.
 
-## Theme packs / 主题包
+## Theme packs
 
 A theme is one TOML file. Eight packs are built in (`default`, `aurora`, `orchid`, `crimson`, `neon`,
 `lavender`, `rose`, `ember`). To add or override one, put `<id>.toml` into `<install dir>\themes\`;
@@ -121,16 +122,16 @@ replaces = ""              # optional: id of a built-in theme this pack replaces
 See `perch-data/builtin/*.toml` for complete examples. After changing the UI language, re-select a theme once so its
 labels are regenerated.
 
-## Wallpapers / 壁纸
+## Wallpapers
 
 Not included. For per-theme wallpapers put `<prefix>.png` (or `<prefix>_day_N.png` / `<prefix>_night_N.png`)
 into `@Resources\wallpapers`. Without such files the HUD leaves your wallpaper untouched.
 
-## Troubleshooting / 常见问题
+## Troubleshooting
 
 - **Nothing shows up** — another window may cover the monitor; press `Win+D`. Check `[display] monitor` in `config.toml`.
 - **Second instance does nothing** — only one HUD runs at a time; exit the tray icon first.
-- **Files search says "Everything not found"** — install and start Everything (the launcher's file mode needs it).
+- **File search says "Everything not found"** — install and start Everything (the launcher's file mode needs it).
 - **Logs** — `%APPDATA%\perch\hud.log` (also reachable from Settings → About).
 
 ## Repository layout

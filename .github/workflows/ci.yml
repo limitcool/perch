@@ -54,7 +54,7 @@ jobs:
           New-Item -ItemType Directory -Force "$dist/@Resources/bin" | Out-Null
           Copy-Item perch/target/release/perch.exe $dist/
           Copy-Item perch-core/target/release/perch-core.exe "$dist/@Resources/bin/"
-          Copy-Item README.md, LICENSE $dist/
+          Copy-Item README.md, README.zh-CN.md, LICENSE $dist/
           Compress-Archive -Path "$dist/*" -DestinationPath dist/perch-windows-x64.zip -Force
 
       - name: Upload artifact
